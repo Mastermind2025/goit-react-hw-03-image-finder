@@ -30,12 +30,11 @@ export default class Modal extends Component {
 
     render() {
         
-        // console.log(this.props.children);
         return createPortal(
             <Overlay onClick={this.handleOverlayClose}>
                 <ModalContainer>
                     {this.props.children}
-                    {/* <LazyLoadImage src={src} alt={alt} /> */}
+                   
                 </ModalContainer>
             </Overlay>,
             modalRoot

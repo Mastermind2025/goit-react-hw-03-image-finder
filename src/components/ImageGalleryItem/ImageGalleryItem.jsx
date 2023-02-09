@@ -15,7 +15,7 @@ export default class ImageGalleryItem extends Component{
         this.setState(({ showModal }) => ({
             showModal: !showModal,
         }));
-        console.log(this.state.showModal)
+       
     }
 
     render() {
