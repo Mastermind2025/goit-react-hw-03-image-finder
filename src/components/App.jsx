@@ -21,10 +21,7 @@ export class App extends Component {
   async componentDidUpdate(_, prevState) {
     const { page, query } = this.state;
 
-    // console.log('prevState.page', prevState.page);
-    // console.log('this.state.page', page);
-
-    if (page !== prevState.page || query !== prevState.query) {
+      if (page !== prevState.page || query !== prevState.query) {
       try {
         this.setState({ status: 'pending' });
        
@@ -54,7 +51,6 @@ export class App extends Component {
 
   isThereImagesOnPage(total, page){
     const totalPages = Math.floor(total / PER_PAGE);
-    // console.log(totalPages);
     return page < totalPages;
     
   }
@@ -71,12 +67,12 @@ export class App extends Component {
      
   loadMore = () => {
     this.setState(({page}) => ({ page: page + 1 }))
-    console.log('hi, this is load more, page', this.state.page);
+    
   };
   
   render() {
     const {images, status, isLoadMore} = this.state;
-    console.log(images.length);
+   
     return (
       <div>
         <Searchbar onSearch={this.handleSearch} />
@@ -112,6 +108,7 @@ App.propTypes = {
 
 //installed
 
+//npm i styled-components
 //notiflix
 //npm i formik
 //npm install react-loader-spinner --save
